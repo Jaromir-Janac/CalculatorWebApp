@@ -1,0 +1,90 @@
+﻿
+
+@model CalculatorWebApp.Models.Calculator
+
+@{
+	ViewData["Title"] = "Calculator";
+}
+
+<div class="container bg-dark">
+	<div class="border border-1 border-dark p-2">
+		<div class="row">
+			<div class="col-sm-4">
+				<h3 class="text-light">Calculator</h3>
+				@using (Html.BeginForm("Create", "Calculators", FormMethod.Post)) {
+
+					<div class="row">
+						<input class="col-12 py-1 my-1 border border-light bg-light" asp-for="Input" id="Input" value="@ViewBag.Result" onkeypress="return isNumberKey(event)" />
+						<input type="button" class="col-3 btn btn-dark border-light" value="C" onclick="deleteInput()" />
+						<input type="button" class="col-3 btn btn-dark border-light" value="(" onclick="addTextToInput('(')" />
+						<input type="button" class="col-3 btn btn-dark border-light" value=")" onclick="addTextToInput(')')" />
+						<input type="button" class="col-3 btn btn-dark border-light" value="+" onclick="addTextToInput('+')" />
+						<input type="button" class="col-3 btn btn-dark border-light" value="1" onclick="addTextToInput('1')" />
+						<input type="button" class="col-3 btn btn-dark border-light" value="2" onclick="addTextToInput('2')" />
+						<input type="button" class="col-3 btn btn-dark border-light" value="3" onclick="addTextToInput('3')" />
+						<input type="button" class="col-3 btn btn-dark border-light" value="-" onclick="addTextToInput('-')" />
+						<input type="button" class="col-3 btn btn-dark border-light" value="4" onclick="addTextToInput('4')" />
+						<input type="button" class="col-3 btn btn-dark border-light" value="5" onclick="addTextToInput('5')" />
+						<input type="button" class="col-3 btn btn-dark border-light" value="6" onclick="addTextToInput('6')" />
+						<input type="button" class="col-3 btn btn-dark border-light" value="*" onclick="addTextToInput('*')" />
+						<input type="button" class="col-3 btn btn-dark border-light" value="7" onclick="addTextToInput('7')" />
+						<input type="button" class="col-3 btn btn-dark border-light" value="8" onclick="addTextToInput('8')" />
+						<input type="button" class="col-3 btn btn-dark border-light" value="9" onclick="addTextToInput('9')" />
+						<input type="button" class="col-3 btn btn-dark border-light" value="/" onclick="addTextToInput('/')" />
+						<input type="button" class="col-3 btn btn-dark border-light" value="0" onclick="addTextToInput('0')" />
+						<input type="button" class="col-3 btn btn-dark border-light" value="." onclick="addTextToInput('.')" />
+						<input type="submit" class="col-6 btn btn-dark border-light" value="=" name="Submit">
+
+					</div>
+				}
+			</div>
+			<div class="col-sm-8 text-light">
+				<h3>History</h3>
+				<ul>
+					@if (ViewBag.History != null) {
+						@foreach (var h in ViewBag.History) {
+							<li>@h.Input</li>
+						}
+					}
+				</ul>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+<script>
+	function addTextToInput(text) {
+		let input = document.getElementById('Input');
+		input.value += text;
+	}
+	function deleteInput() {
+		let input = document.getElementById('Input');
+		input.value = '';
+	}
+	function isNumberKey(evt) {
+		var charCode = (evt.which) ? evt.which : evt.keyCode;
+		let input = document.getElementById('Input');
+		if (input.value != "") {
+			var lastChar = input.value.charCodeAt(input.value.length - 1)
+			if (lastChar >= 40 && lastChar <= 47 && lastChar !=41) {
+				if (charCode >= 42 && charCode <= 47 ) {
+					return false;
+				}
+				if (charCode >= 48 && charCode <= 57 && charCode != 44 || charCode == 40) {
+					return true;
+				}
+			}
+			if ((lastChar >= 48 && lastChar <= 57 || lastChar == 41) && (charCode >= 40 && charCode <= 57 && charCode != 44)) {
+				return true;
+			}
+			return false;
+		}
+		if (input.value == "" && (charCode >= 48 && charCode <= 57 || charCode == 40)) {
+			return true;
+		}
+		return false;
+	}
+
+</script>
