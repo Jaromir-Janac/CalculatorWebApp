@@ -1,0 +1,83 @@
+﻿@model CalculatorViewModel
+
+@{
+	ViewData["Title"] = "Calculator";
+}
+
+<div class="container bg-dark">
+	<div class="border border-1 border-dark p-2">
+		<div class="row">
+			<div class="col-sm-4">
+				<h3 class="text-light">Calculator</h3>
+				<form class="row" asp-controller="Calculator" asp-action="Calculation" method="post" role="form">
+					<input class="col-12 py-1 my-1 border border-light bg-light text-end" asp-for="Input" id="Input" value="@ViewBag.Result" readonly />
+					<input type="button" class="col-3 btn btn-danger border-light" value="C" onclick="deleteInput()" />
+					<button type="button" class="col-3 btn btn-dark border-light" onclick="roundSwitch()">RND:</button>
+					<input type="text" class="col-3 btn btn-dark border-light" onclick="roundSwitch()" asp-for="IsRounded" id="IsRounded" value="false" readonly />
+					<input type="button" class="col-3 btn btn-dark border-light" value="+" onclick="addToInput('+')" />
+					<input type="button" class="col-3 btn btn-dark border-light" value="1" onclick="addToInput('1')" />
+					<input type="button" class="col-3 btn btn-dark border-light" value="2" onclick="addToInput('2')" />
+					<input type="button" class="col-3 btn btn-dark border-light" value="3" onclick="addToInput('3')" />
+					<input type="button" class="col-3 btn btn-dark border-light" value="-" onclick="addToInput('-')" />
+					<input type="button" class="col-3 btn btn-dark border-light" value="4" onclick="addToInput('4')" />
+					<input type="button" class="col-3 btn btn-dark border-light" value="5" onclick="addToInput('5')" />
+					<input type="button" class="col-3 btn btn-dark border-light" value="6" onclick="addToInput('6')" />
+					<input type="button" class="col-3 btn btn-dark border-light" value="*" onclick="addToInput('*')" />
+					<input type="button" class="col-3 btn btn-dark border-light" value="7" onclick="addToInput('7')" />
+					<input type="button" class="col-3 btn btn-dark border-light" value="8" onclick="addToInput('8')" />
+					<input type="button" class="col-3 btn btn-dark border-light" value="9" onclick="addToInput('9')" />
+					<input type="button" class="col-3 btn btn-dark border-light" value="/" onclick="addToInput('/')" />
+					<input type="button" class="col-3 btn btn-dark border-light" value="0" onclick="addToInput('0')" />
+					<input type="button" class="col-3 btn btn-dark border-light" value="." onclick="addToInput('.')" />
+					<input type="submit" class="col-6 btn btn-dark border-light" value="=" name="Submit">
+
+				</form>
+			</div>
+			<div class="col-sm-8 text-light">
+				<h3>History</h3>
+				<ul>
+					@if (ViewBag.History != null)
+					{
+						@foreach (var h in ViewBag.History)
+						{
+							<li>@h.Input</li>
+						}
+					}
+				</ul>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+<script>
+	function addToInput(x) {
+		let input = document.getElementById('Input');
+		let val = input.value;
+		let num = Number(x)
+		if (!isNaN(num)) {
+			input.value += x;
+		} else {
+		if(val.length > 0 && !isNaN(Number(val.substr(val.length-1))))
+		input.value += x;
+		}
+	}
+	function deleteInput() {
+		let input = document.getElementById('Input');
+		input.value = '';
+	}
+	function roundSwitch() {
+		let isRound = document.getElementById('IsRounded');
+		if (isRound.value == "false") {
+			isRound.value = "true";
+			isRound.classList.remove("btn-dark");
+			isRound.classList.add("btn-success");
+		} else if (isRound.value == "true") {
+			isRound.value = "false";
+			isRound.classList.remove("btn-success");
+			isRound.classList.add("btn-dark");
+		}
+
+	}
+</script>

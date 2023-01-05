@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "dkZiNi7ZrLwAba5niv2gvq/Lc4gTWRhnc/ZOgM1fKRyrcXFfLEpgM+iVxx+wMsTNCernVqvN6TcpeS6GINluwQ==",
+  "success": true,
+  "projectFilePath": "D:\\_Prace\\Programia\\Solutions\\CalculatorApp\\CalculatorLogic\\CalculatorLogic.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DjR\\.nuget\\packages\\org.matheval\\1.0.0.3\\org.matheval.1.0.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

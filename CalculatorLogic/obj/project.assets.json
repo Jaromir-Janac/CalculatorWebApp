@@ -1,0 +1,117 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "org.matheval/1.0.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/org.matheval.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/org.matheval.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "org.matheval/1.0.0.3": {
+      "sha512": "DybbFCn/LoQpBCeqdUll4kwayJPrNyBSuZlufdWrMUye75rzVvsE+pjRp+be2Fleu1gYWYYXotHjUNqrfFOWCg==",
+      "type": "package",
+      "path": "org.matheval/1.0.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/org.matheval.dll",
+        "lib/net40/org.matheval.dll",
+        "lib/net45/org.matheval.dll",
+        "lib/net46/org.matheval.dll",
+        "lib/net461/org.matheval.dll",
+        "lib/net462/org.matheval.dll",
+        "lib/net47/org.matheval.dll",
+        "lib/net471/org.matheval.dll",
+        "lib/net472/org.matheval.dll",
+        "lib/net48/org.matheval.dll",
+        "lib/netcoreapp2.1/org.matheval.dll",
+        "lib/netcoreapp3.1/org.matheval.dll",
+        "lib/netstandard2.0/org.matheval.dll",
+        "org.matheval.1.0.0.3.nupkg.sha512",
+        "org.matheval.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "org.matheval >= 1.0.0.3"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\DjR\\.nuget\\packages\\": {},
+    "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\_Prace\\Programia\\Solutions\\CalculatorApp\\CalculatorLogic\\CalculatorLogic.csproj",
+      "projectName": "CalculatorLogic",
+      "projectPath": "D:\\_Prace\\Programia\\Solutions\\CalculatorApp\\CalculatorLogic\\CalculatorLogic.csproj",
+      "packagesPath": "C:\\Users\\DjR\\.nuget\\packages\\",
+      "outputPath": "D:\\_Prace\\Programia\\Solutions\\CalculatorApp\\CalculatorLogic\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\DjR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "org.matheval": {
+            "target": "Package",
+            "version": "[1.0.0.3, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

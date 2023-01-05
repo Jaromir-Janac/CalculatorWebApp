@@ -1,0 +1,12 @@
+D:\_Prace\Programia\Solutions\CalculatorApp\CalculatorLogic\bin\Release\net6.0\CalculatorLogic.deps.json
+D:\_Prace\Programia\Solutions\CalculatorApp\CalculatorLogic\bin\Release\net6.0\CalculatorLogic.dll
+D:\_Prace\Programia\Solutions\CalculatorApp\CalculatorLogic\bin\Release\net6.0\CalculatorLogic.pdb
+D:\_Prace\Programia\Solutions\CalculatorApp\CalculatorLogic\obj\Release\net6.0\CalculatorLogic.csproj.AssemblyReference.cache
+D:\_Prace\Programia\Solutions\CalculatorApp\CalculatorLogic\obj\Release\net6.0\CalculatorLogic.GeneratedMSBuildEditorConfig.editorconfig
+D:\_Prace\Programia\Solutions\CalculatorApp\CalculatorLogic\obj\Release\net6.0\CalculatorLogic.AssemblyInfoInputs.cache
+D:\_Prace\Programia\Solutions\CalculatorApp\CalculatorLogic\obj\Release\net6.0\CalculatorLogic.AssemblyInfo.cs
+D:\_Prace\Programia\Solutions\CalculatorApp\CalculatorLogic\obj\Release\net6.0\CalculatorLogic.csproj.CoreCompileInputs.cache
+D:\_Prace\Programia\Solutions\CalculatorApp\CalculatorLogic\obj\Release\net6.0\CalculatorLogic.dll
+D:\_Prace\Programia\Solutions\CalculatorApp\CalculatorLogic\obj\Release\net6.0\refint\CalculatorLogic.dll
+D:\_Prace\Programia\Solutions\CalculatorApp\CalculatorLogic\obj\Release\net6.0\CalculatorLogic.pdb
+D:\_Prace\Programia\Solutions\CalculatorApp\CalculatorLogic\obj\Release\net6.0\ref\CalculatorLogic.dll
